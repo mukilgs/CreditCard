@@ -43,25 +43,25 @@ public class CreditCardTest {
 	@Test
 	public void testCreateCreditCard() {
 		CreditCardRegistration registrationModel = new CreditCardRegistration();
-		registrationModel.setAcNo(4578);
-		registrationModel.setCname("Krishnendu");
+		registrationModel.setAcNo(4567);
+		registrationModel.setCname("mukil");
 		registrationModel.setAge(18);
-		registrationModel.setPhoneno(76256);
+		registrationModel.setPhoneno(98754);
 		registrationModel.setSalary(30000);
 
 		CreditCardModel creditCard1 = new CreditCardModel();
-		creditCard1.setCreditCardNumber(4588);
+		creditCard1.setCreditCardNumber(4433);
 		creditCard1.setCreditLimit(50000);
-		creditCard1.setPassword("krishna");
+		creditCard1.setPassword("mukil");
 		creditCard1.setStatus("unblock");
-		creditCard1.setCname("Krishnendu");
+		creditCard1.setCname("mukil");
 
 		CreditCardModel creditCard2 = new CreditCardModel();
-		creditCard2.setCreditCardNumber(4588);
+		creditCard2.setCreditCardNumber(4512);
 		creditCard2.setCreditLimit(50000);
-		creditCard2.setPassword("123");
+		creditCard2.setPassword("1234");
 		creditCard2.setStatus("unblock");
-		creditCard2.setCname("Krishnendu");
+		creditCard2.setCname("rithuraj");
 
 		when(userRepo.save(creditCard2)).thenReturn(creditCard1);
 		assertEquals(creditCard1, creditCardService.createCard(registrationModel));
